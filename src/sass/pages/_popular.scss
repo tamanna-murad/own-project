@@ -1,0 +1,59 @@
+@use "../abstracts/index" as *;
+@use "../components/index" as *;
+@use "../base/index" as *;
+
+.popular {
+    height: auto;
+    padding: 2.5rem 0 4rem 0;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4rem;
+        @extend .width;
+        &-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, min-content));
+            column-gap: 3rem;
+            .popular__data {
+                & figure {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 2rem;
+                    transition: $transition;
+                    padding: 1rem 1rem 2rem 1rem;
+                    border-radius: 1rem;
+                    &:hover {
+                        box-shadow: 0 12px 16px hsla(288, 66%, 45%, 0.1);
+                    }
+                    & figcaption {
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 1.5rem;
+                    }
+                }
+
+                & figure img {
+                    // width: 17rem;
+                    object-fit: cover;
+                    border-radius: 1rem;
+                }
+
+                &-price {
+                    display: flex;
+                    column-gap: 0.3rem;
+                    span:last-child {
+                        color: $text-color;
+                        font-size: 1.7rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        &-button {
+            display: flex;
+            column-gap: 2rem;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

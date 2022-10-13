@@ -1,0 +1,54 @@
+@use "../abstracts/index" as *;
+@use "../components/index" as *;
+@use "../base/index" as *;
+.footer {
+    padding: 8rem 0;
+    // background-color: yellow;
+    &__container {
+        @extend .width;
+        display: flex;
+        flex-direction: column;
+        row-gap: 8rem;
+        &--description {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            & .footer__container--logo {
+                display: flex;
+                flex-direction: column;
+                row-gap: 2rem;
+            }
+            & .footer__container--details {
+                display: flex;
+                flex-direction: row;
+                column-gap: 4rem;
+                & div .subheading {
+                    margin-bottom: 2.5rem;
+                }
+                & div ul {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 1.5rem;
+                }
+                & div .links {
+                    display: flex;
+                    flex-direction: row;
+                    column-gap: 1.5rem;
+                }
+                & div ul li a {
+                    transition: $transition;
+                    &:hover {
+                        color: $title-color;
+                    }
+                }
+            }
+        }
+        &--copyright {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+// start from here

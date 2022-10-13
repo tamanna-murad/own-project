@@ -1,0 +1,20 @@
+@use "./abstracts/index" as *;
+@use "./base/index" as *;
+@use "./components/index" as *;
+@use "./layouts/index" as *;
+@use "./pages/index" as *;
+@use "./themes/index" as *;
+// @use  "./vendors/";
+// @use "./base/base";
+// @use "./base/base" as *;
+// @import "./base/base";
+
+svg {
+    height: 32px;
+    width: 32px;
+    fill: white;
+    background-color: blue;
+}
+
+// ::-webkit-input-placeholder{
+// }

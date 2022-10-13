@@ -1,0 +1,45 @@
+@use "../abstracts/index" as *;
+@use "../components/index" as *;
+@use "../base/index" as *;
+
+.subscribe {
+    padding: 8rem 0;
+    .subscribe__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 3rem;
+        text-align: center;
+        @extend .width;
+        border: 0.6rem solid $first-color-light;
+        background-color: $first-color;
+        width: 100%;
+        border-radius: 2rem;
+        padding: 4.5rem 2.5rem;
+        &--title {
+            font-size: 3.7rem;
+            font-weight: 600;
+            letter-spacing: 0.6px;
+            margin-bottom: 1rem;
+            color: $first-color-lighten;
+        }
+        &--description {
+            color: hsl(228, 98%, 92%);
+            margin-left: 4rem;
+            margin-right: 4rem;
+            @extend .description;
+            margin-bottom: 2rem;
+        }
+        &--button {
+            color: $first-color-lighten;
+            background: $first-color-light;
+            border: 0.2rem solid #fff;
+            font-weight: 600;
+            transition: $transition;
+            &:hover {
+                background-color: $first-color;
+            }
+        }
+    }
+}

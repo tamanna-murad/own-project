@@ -1,0 +1,11 @@
+@use "../abstracts/index" as *;
+@use "../components/index" as *;
+@use "../base/index" as *;
+@use "../layouts/index" as *;
+//  all complete home component till the end media query;
+/**/
+
+.home {
+    background: linear-gradient(170deg, hsl(0, 0%, 22%) 0%, hsl(0, 0%, 6%) 30%);
+    height: auto;
+}

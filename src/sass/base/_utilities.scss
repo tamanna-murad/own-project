@@ -1,0 +1,180 @@
+@use "../abstracts/index" as *;
+
+.centerItems {
+    align-items: center;
+    justify-content: space-between;
+}
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    &__shadow {
+        width: 40rem;
+        height: 60.6rem;
+        background-color: $background-color;
+        border-radius: 19.5rem 19.5rem 1.6rem 1.6rem;
+    }
+
+    &__image-home {
+        position: absolute;
+        width: 37rem;
+        height: 58rem;
+        overflow: hidden;
+        border-radius: 18.5rem 18.5rem 1.6rem 1.6rem;
+        inset: 0;
+        margin: 1.3rem auto;
+        box-shadow: 0 1.6rem 3.2rem hsla(228, 66%, 25%, 0.25);
+    }
+}
+
+.subheading h2 {
+    font-size: 2.1rem;
+    color: $title-color;
+    font-weight: 600;
+    line-height: 2.3rem;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
+
+    &__subtitle {
+        color: $second-color;
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+    &__heading {
+        color: $title-color;
+        font-size: 3.5rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        &--dot {
+            font-size: 2rem;
+            color: $second-color;
+            align-self: flex-end;
+        }
+    }
+}
+.popular__data .description {
+    @include descriptionMix(1.4rem);
+}
+.value__container--description .description,
+.contact__container--description .description,
+.subscribe__container .subscribe__container--description {
+    @include descriptionMix(1.8rem);
+}
+.accordion__container--description .description {
+    @include descriptionMix(1.6rem);
+}
+.footer__container--logo .description,
+.footer__container--details .description {
+    @include descriptionMix(1.7rem);
+}
+
+.footer__container--copyright .description {
+    @include descriptionMix(1.4rem);
+}
+
+.hiddenYNegative {
+    @extend .hidden;
+    @include translateYAix(-60rem);
+}
+.hiddenYPositive {
+    @extend .hidden;
+    @include translateYAix(60rem);
+}
+.center {
+    align-content: center;
+    justify-content: center;
+}
+
+input {
+    @extend .borderOutline;
+    color: $text-color;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+.icon-arrow-bold-up {
+    @extend .svg;
+    @include fillSvg($first-color-lighten, 2rem, 2rem);
+    transition: $transition;
+}
+.footer__container--logo .logo .icon-arrow-bold-up {
+    @include fillSvg($first-color, 2rem, 2rem);
+}
+
+.icon-arrow-bold-up,
+.icon-moon,
+.icon-location-pin,
+.icon-plus,
+.icon-currency-dollar,
+.icon-cheveron-left,
+.icon-cheveron-right,
+.icon-arrow_drop_down,
+.icon-point-of-interest,
+.icon-squared-cross,
+.icon-chart-bar,
+.icon-check_box,
+.icon-facebook,
+.icon-instagram,
+.icon-pinterest-p,
+.icon-chevrons-up {
+    @extend .svg;
+    transition: $transition;
+}
+.icon-facebook,
+.icon-instagram,
+.icon-pinterest-p,
+.icon-chevrons-up {
+    @include fillSvg($text-color, 2.8rem, 2.8rem);
+}
+
+.icon-facebook:hover,
+.icon-instagram:hover,
+.icon-pinterest-p:hover {
+    fill: $title-color;
+}
+
+.icon-moon {
+    @include fillSvg($text-color-light, 2.8rem, 2.8rem);
+}
+.icon-location-pin {
+    @include fillSvg($first-color-alt, 2.5rem, 2.5rem);
+}
+.icon-plus {
+    @include fillSvg($second-color, 1.1rem, 1.1rem);
+}
+.icon-currency-dollar {
+    @include fillSvg($second-color, 1.8rem, 1.8rem);
+}
+.icon-cheveron-left {
+    @include fillSvg($title-color, 3rem, 3rem);
+}
+.icon-cheveron-right {
+    @include fillSvg($title-color, 3rem, 3rem);
+}
+
+.icon-arrow_drop_down {
+    background-color: hsl(240, 20%, 97%);
+    @include fillSvg($first-color, 2.5rem, 2.5rem);
+    padding: 0.1rem;
+    border-radius: $border-radius;
+    cursor: pointer;
+}
+
+.icon-point-of-interest,
+.icon-squared-cross,
+.icon-chart-bar,
+.icon-check_box,
+.icon-phone-call,
+.icon-chat,
+.icon-videocam,
+.icon-message {
+    background-color: $background-color;
+    @include fillSvg($first-color, 4rem, 4rem);
+    padding: 0.4rem 0.6rem;
+    border-radius: $border-radius;
+}
+

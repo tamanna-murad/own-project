@@ -1,0 +1,19 @@
+@use "../abstracts/index" as *;
+@use "../base/index" as *;
+.logos {
+    @extend .width;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(4rem, min-content));
+    @extend .center;
+    padding: 10rem 0 8rem 0;
+    column-gap: 5rem;
+}
+.logos div figure img {
+    width: 14rem;
+    // filter: brightness(0);
+    opacity: 50%;
+    transition: $transition;
+    &:hover {
+        opacity: 1;
+    }
+}
